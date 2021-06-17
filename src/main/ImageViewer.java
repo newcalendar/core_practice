@@ -1,3 +1,5 @@
+package main;
+
 import java.awt.*;
 import java.io.*;
 import javax.swing.*;
@@ -24,7 +26,7 @@ public class ImageViewer
 //            new一个窗口
             JFrame frame = new ImageViewerFrame();
 //            设置窗口名
-            frame.setTitle("ImageViewer");
+            frame.setTitle("图片展示");
 //            关闭窗口
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //            是否可视
