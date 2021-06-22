@@ -1,5 +1,7 @@
 package main;
 
+import org.junit.Test;
+
 /**
  * 此类展示了怎么存取二维数组
  * time 2021/6/17
@@ -44,17 +46,35 @@ public class array_2d {
 
         // print one row of interest rates
         for (int j = 0; j < interestRate.length; j++)
+//            保留整数百分比
             System.out.printf("%9.0f%%", 100 * interestRate[j]);
 
         System.out.println();
 
         // print balance table
+          //  for (double[] row : balances)  相当于遍历，增强for循环
         for (double[] row : balances) {
             // print table row
             for (double b : row)
+             //   保留两位小数
                 System.out.printf("%10.2f", b);
+           //输出一组后换行
+            System.out.println();
+        }
+    }
+
+
+    //用单元测试，测试增强遍历和数组默认初始值
+    @Test
+    public void test(){
+        double [] [] test=new double[4][4];
+        test[0][3] =1;
+        for(double[] row :test) {
+            for (double b:row)
+            System.out.println(b);
 
             System.out.println();
         }
+
     }
 }
